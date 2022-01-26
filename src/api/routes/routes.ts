@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Router } from "express";
 
 import auth from "./auth"
 
@@ -12,7 +12,7 @@ const isAuth = require('../../middlewares/user-is-auth')
 
 console.log(isAuth)
 
-const app = express();
+const app = Router();
 
 app.use('/auth', auth);
 
