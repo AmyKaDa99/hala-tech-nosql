@@ -32,7 +32,7 @@ export default class UserController {
 
           await user.save() 
 
-          return res.status(201).json(`id: ${user._id}, username: ${user.username} `) })
+          return res.status(201).json({id:user.id,username:user.username}) })
                           
         } catch (e) {
 
